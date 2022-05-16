@@ -4,7 +4,8 @@ import SingleQuestion from "./Question";
 import "./_questions.scss";
 
 const Questions = () => {
-  const [questions, setQuestions] = useState(data);
+  const [questions, _] = useState(data);
+
   return (
     <>
       <div className="questions container">
