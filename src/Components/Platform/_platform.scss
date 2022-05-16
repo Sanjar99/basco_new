@@ -1,6 +1,6 @@
 .platform {
   padding: 5rem;
-  height: 100vh;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 2fr);
   &__left {

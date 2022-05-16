@@ -1,8 +1,9 @@
 .advice {
-  height: 100vh;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
+  padding-bottom: 4rem;
   &__left {
     position: relative;
     padding: 0 6rem;
@@ -22,8 +23,19 @@
         line-height: 1.4;
       }
     }
-    &--more__button {
-      margin-top: 4rem;
+    &--button {
+      button {
+        border: none;
+        text-align: center;
+        background-color: #a66dff;
+        color: #fff;
+        width: 20rem;
+        height: 5rem;
+        border-radius: 0.5rem;
+        font-weight: 800;
+        cursor: pointer;
+        outline: none;
+      }
     }
     &--img--1 {
       position: absolute;
@@ -51,12 +63,13 @@
     }
     &--card {
       opacity: 1;
-      right: 40%;
+      right: 35%;
       position: absolute;
-      bottom: 18%;
+      bottom: 25%;
       width: 24rem;
       height: 9rem;
       display: grid;
+      background-color: #fff;
       grid-template-columns: repeat(2, 1fr);
       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
         rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
@@ -120,5 +133,16 @@
       transform: rotate(15deg);
       z-index: -222;
     }
+  }
+}
+.hide__parag {
+  display: block;
+  margin: 1rem auto;
+  width: 100%;
+  margin-left: 30rem;
+  p {
+    margin: 2rem 0;
+    font-size: 1.9rem;
+    line-height: 1.4;
   }
 }

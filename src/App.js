@@ -4,10 +4,11 @@ import Card from "./Components/Card/Card";
 import Header from "./Components/Header/Header";
 import Platform from "./Components/Platform/Platform";
 import Statistics from "./Components/Statistica/Statistics";
+
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header /> */
       <About />
       <Card />
       <Advice />

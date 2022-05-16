@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "..//main.scss";
 import "./_platform.scss";
 import img1 from "../../Assets/images/platformImg-1.png";
@@ -9,7 +9,9 @@ import star from "../../Assets/images/star (1).png";
 import plus from "../../Assets/images/plus (1).png";
 import sariq from "../../Assets/images/adviceImg-3.png";
 import halqa from "../../Assets/images/adviceImg-1.png";
+import { Fade } from "react-reveal";
 function Platform() {
+  const [shower, setShower] = useState(false);
   return (
     <section className="platform container">
       <div className="platform__left">
@@ -31,7 +33,9 @@ function Platform() {
           samarali boshqarish va avtomatlashtirish imkoniyatini beradi.
         </p>
         <div className="platform__left--more--button">
-          <button>Davomini o`qish</button>
+          <button onClick={() => setShower(!shower)}>
+            {shower ? "Yopish" : "Davomini o`qish "}
+          </button>
         </div>
         <img className="platform__left--img--1" src={star} alt="" />
         <img className="platform__left--img--2" src={plus} alt="" />
@@ -48,6 +52,61 @@ function Platform() {
           <p> Videoni ko’rish</p> <img src={play} alt="" />
         </div>
       </div>
+      {shower ? (
+        <Fade top>
+          <div className="hide__parag">
+            <p>
+              <p className="platform__left--parag--4">
+                Bu bilan esa o’sha zahotiyoq biznesingizdagi operatsion va
+                moliyaviy holatni yaqqol ko’rish imkoniyatiga ega bo’lasiz.
+                Holatni aniq ko’ra olish esa to’g’ri va tezkor qarorlarni qabul
+                qilishingizga yordam beradi. <br /> Bu orqali o’z-o’zidan
+              </p>
+              <p className="platform__left--parag--4">
+                Moliyaviy holatingizni va samaradorligingizni bir necha
+                baravarga oshirishingiz mumkin degani. <br /> Yagona tizim
+                orqali
+              </p>
+              <p className="platform__left--parag--4">
+                Biznesingizdagi butun boshli mijozlar bilan munosabatlar, savdo
+                jarayonlari, xodimlar bilan bog’liq barcha ma’lumotlar,
+                kompaniyaning barcha turdagi hisob-kitoblaridan tortib… <br />
+              </p>
+              <p className="platform__left--parag--4">
+                Skladdagi tayyor mahsulotlar harakatigacha bo’lgan aniq
+                ma’lumotlarni nazorat qilishingiz va boshqarishingiz mumkin
+                bo’ladi. <br /> Ma’lumotlarning aniqligi sabab siz tez va
+                to’g’ri
+              </p>
+              <p className="platform__left--parag--4">
+                Qarorlarni qabul qilish imkoniyatiga ega bo’lasiz. <br />
+              </p>
+              <p className="platform__left--parag--4">
+                Vaqtingizni biznesingizga to’g’ridan-to’g’ri foyda olib
+                kelmaydigan ishlarga sarflashdan to’xtab… <br />
+              </p>
+              <p className="platform__left--parag--4">
+                Bank hisob-raqamingizda, haqiqatda, ijobiy o’zgarish qiladigan
+                va kompaniyangizning bozordagi ulushini oshiradigan muhim
+                ishlarga diqqat qila boshlaysiz. <br />
+              </p>
+              <p className="platform__left--parag--4">
+                Xo’sh, qanday qilib ushbu imkoniyatga ega bo’lishingiz mumkin?
+                <br />
+              </p>
+              <p className="platform__left--parag--4">
+                Shunchaki, quyidagi havola orqali ma’lumotlaringizni qoldiring.
+                <br />
+              </p>
+              <p className="platform__left--parag--4">
+                “Mutaxassis bilan bog’lanish”
+              </p>
+            </p>
+          </div>
+        </Fade>
+      ) : (
+        ""
+      )}
     </section>
   );
 }
