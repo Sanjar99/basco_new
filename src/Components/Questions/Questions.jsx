@@ -4,7 +4,7 @@ import SingleQuestion from "./Question";
 import "./_questions.scss";
 
 const Questions = () => {
-  const [questions, _] = useState(data);
+  const [questions, setQuestions] = useState(data);
 
   return (
     <>
